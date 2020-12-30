@@ -260,7 +260,7 @@ fn attempts_to_reach_target_cached(min: i32, max: i32, target: i32) -> f64 {
         _ if target <= 0 => 0.0,
         _ => {
             1.0 + 1.0 / (max - min + 1) as f64
-                * (min..(max + 1))
+                * (min..=max)
                     .map(|k| attempts_to_reach_target_cached(min, max, target - k))
                     .sum::<f64>()
         }
@@ -319,7 +319,7 @@ impl UniformProbabilityTable {
             let mut normalization_factor = F::zero();
             let mut exp_contrib = F::zero();
 
-            for dots in 1..(std::cmp::min(self.distribution_size, num) + 1) {
+            for dots in 1..=std::cmp::min(self.distribution_size, num) {
                 let prob = probabilities[num - dots].clone();
                 normalization_factor += prob.clone();
                 exp_contrib += prob * (expectations[num - dots].clone() + F::from(1));

@@ -131,7 +131,7 @@ impl DropSim {
                 (
                     weight_remaining,
                     drop.item,
-                    drop.min_count..(drop.max_count + 1),
+                    drop.min_count..=drop.max_count,
                 )
             })
             .unwrap();
