@@ -1,0 +1,29 @@
+[package]
+name = "mc_sim"
+version = "0.1.0"
+authors = ["Alexei Barnes <ab@alexeibarnes.com>"]
+edition = "2018"
+license = "WTFPL OR MIT OR Apache-2.0"
+description = "A simulator for minecraft speed runs, as that pertains to the Dream cheating scandal."
+repository = "https://github.com/alexei-b/mc_sim"
+keywords = ["minecraft", "simulation", "dream"]
+categories = ["simulation"]
+readme = "readme.md"
+include = ["src/", "readme.md", "LICENSE-WTFPL", "LICENSE-MIT", "LICENSE-APACHE"]
+
+[lib]
+name = "mc_sim"
+
+[dependencies]
+cached = "0.22.0"
+fraction = "0.8.0"
+humantime = "2.0.1"
+quick-error = "2.0.0"
+rand = "0.8.0"
+serde = "1.0.118"
+serde_derive = "1.0.118"
+statrs = "0.13.0"
+
+[dev-dependencies]
+csv = "1.1.5"
+structopt = "0.3.21"

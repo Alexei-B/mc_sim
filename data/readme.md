@@ -1,0 +1,1 @@
+This data was generated using the latest version of this library, from the `blaze_rod_distribution` and `ender_pearl_distribution` examples. Please read the readme for the library to understand what this data means.
